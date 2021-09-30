@@ -1,16 +1,21 @@
-.bar div {
-  color: white;
-}
+
 .bar {
   position: relative;
   top: 680px;
   left: 0;
   bottom: 0;
   width: 100%;
-  font-size: 0;
+  /* font-size:  */
   height: 70px; 
   background-color: black;
 }
+/* .bar2 div {
+color: pink;
+} */
+
+.bar div {
+    color: white;
+  }
 
 .main-item {
   height: 100%;
