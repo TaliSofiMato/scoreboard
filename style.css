@@ -1,149 +1,101 @@
-h1{
-    color: pink;
-    text-align: center;
-  }
-  
-  .bar {
-    position: relative;
-    top: 680px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-size: 0;
-  }
-  
-  .bar div {
-    display: inline-block;
-     height: 40px; 
-  }
-  
-  .leftscore {
-    width: 30%;
-    color: red;
-    background-color: orange;
-    vertical-align: top;
-    height: 30px;
-  }
-  
-  .textleft{
-    width: 15%;
-    color: red;
-    font-family: sans-serif;
-    font-weight: italic;
-    float: left;
-    margin-left: 50px;
-    margin-top: 2px;
-    font-size: 30px;
-  }
-  
-  .scoreleft {
-    float: right;
-    margin-top: 2px;
-    margin-right: 10px;
-    font-weight: bold;
-    font-size: 35px;
-  }
-  
-  .timeoutsright{
-    color: white;
-    font-size: 15px;
-    float: right;
-    margin-top: 20px;
-    
-  }
-  .backgroundtimeouts{
-    background-color: black;
-    width: 30%;
-    height: 10px;
-    float: right;
-    /*margin-top: 30px;*/
-  }
-  
-  .rightscore{
-    background-color: grey;
-    width: 30%;
-    vertical-align: top;
-    height: 30px;
-    
-  }
-  
-  .textright {
-    font-family: san-serif;
-    float: right;
-    margin-right: 50px;
-    margin-top: 2px;
-    font-weight: italic;
-    font-size: 30px;
-  }
-  
-  .scoreright {
-    font-weight: bold;
-    float: left;
-    margin-left: 10px;
-    margin-top: 2px;
-  font-size: 35px;
-    
-  }
-  
-  .time {
-    background-color: black;
-    color: white;
-    width: 5%;
-    text-align: center;
-    font-size: 20px;
-    vertical-align: top;
-    height: 40px;
-  }
-  
-  .logo {
-    width: 5%; 
-    color: magenta;
-    background-color: blue;
-    text-align: center;
-    font-weight: bold;
-    vertical-align: top;
-  font-size: 25px;
-    height: 40px;
-  }
-  
-  .finals {
-    background-color: black;
-    color: white;
-    width: 30%;
-    text-align: center;
-    opacity: 0.7;
-    height: 40px;
-  }
-  
-  .finalstext {
-    opacity: 1;
-    color: blue;
-    font-size: 25px;
-  }
-  
-  .livegame {
-    width: 100%;
-    height: 720px;
-    background-color: pink;
-  }
-  
-  .livetext {
-    color: white;
-    float: right;
-    font-weight: bold;
-    position: absolute;
-    left: 755px;
-    top: 135px;
-    z-index: 99;
-    
-  }
-  
-  .textbackground{
-    position: absolute;
-    background-color: black;
-    height: 25px;
-    width: 35px;
-    left: 750px;
-    top: 135px;
-    opacity: 0.7;
-  }
+.bar div {
+  color: white;
+}
+.bar {
+  position: relative;
+  top: 680px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 0;
+  height: 70px; 
+  background-color: black;
+}
+
+.main-item {
+  height: 100%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.scores {
+  width: 40%;
+  height: 100%;
+}
+
+.score {
+  display: inline-block;
+  width: 50%;
+  height: 100%;
+}
+
+.score-left {
+  background-color: orange;
+}
+
+.score-right {
+  background-color: grey;
+}
+
+.top-of-score {
+  height: 70%;
+}
+
+.bottom-of-score {
+  height: 30%;
+  background-color: black;
+}
+
+.time {
+  height: 100%;
+  width: 10%;
+}
+
+.context {
+  width: 35%;
+}
+
+.station-logo {
+  width: 10%;
+}
+
+.top-of-time {
+  height: 60%;
+}
+
+.bottom-of-time {
+  height: 40%;
+}
+
+.bottom-of-time div {
+  display: inline-block;
+}
+
+.context div {
+  display: inline-block;
+  height: 100%;
+}
+
+.left-of-context {
+  width: 60%;
+}
+
+.top-of-left-context {
+  height: 60%;
+}
+
+.bottom-of-left-context {
+  height: 40%;
+}
+
+.right-of-context {
+  width: 40%;
+}
+
+.top-of-right-context {
+  height: 50%;
+}
+
+.bottom-of-right-context {
+  height: 50%;
+}
