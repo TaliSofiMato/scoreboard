@@ -9,11 +9,9 @@
   height: 70px; 
   background-color: black;
 }
-/* .bar2 div {
-color: pink;
-} */
 
-.bar div {
+
+body {
     color: white;
   }
 
@@ -26,6 +24,8 @@ color: pink;
 .scores {
   width: 40%;
   height: 100%;
+
+
 }
 
 .score {
@@ -45,6 +45,34 @@ color: pink;
 .top-of-score {
   height: 70%;
 }
+.top-of-score div{
+    display: inline-block;
+}
+.logoleft {
+width: 20%;
+}
+.rankleft {
+width: 10%;
+}
+.textleft{ 
+width: 25%;
+}
+.scoreleft {
+    width: 40%;
+}
+
+.scoreright{
+    width: 40%; 
+}
+.textright {
+    width: 25%;
+}
+.rankright{
+    width: 10%;
+}
+.logoright{
+    width: 20%;
+}
 
 .bottom-of-score {
   height: 30%;
@@ -55,25 +83,20 @@ color: pink;
   height: 100%;
   width: 10%;
 }
+.top-of-time {
+    height: 60%;
+  }
+  
+  .bottom-of-time {
+    height: 40%;
+  }
+  
+  .bottom-of-time div {
+    display: inline-block;
+  }
 
 .context {
   width: 35%;
-}
-
-.station-logo {
-  width: 10%;
-}
-
-.top-of-time {
-  height: 60%;
-}
-
-.bottom-of-time {
-  height: 40%;
-}
-
-.bottom-of-time div {
-  display: inline-block;
 }
 
 .context div {
@@ -93,7 +116,8 @@ color: pink;
 }
 
 .right-of-context {
-  width: 40%;
+  width: 35%;
+display: block; 
 }
 
 .top-of-right-context {
@@ -103,3 +127,7 @@ color: pink;
 .bottom-of-right-context {
   height: 50%;
 }
+
+.station-logo {
+    width: 10%;
+  }
