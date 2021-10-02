@@ -8,7 +8,6 @@
   height: 70px; 
   background-color: black;
   font-size: 0;
-
 }
 
 body {
@@ -24,6 +23,7 @@ body {
 
 .scores {
   width: 40%;
+  opacity: 100%;
 }
 
 .score {
@@ -34,10 +34,14 @@ body {
 
 .score-left {
   background-color: orange;
+  border:1px solid black;
+box-sizing: border-box;
 }
 
 .score-right {
   background-color: grey;
+  border:1px solid black;
+  box-sizing: border-box;
 }
 
 .top-of-score {
@@ -45,33 +49,73 @@ body {
 }
 .top-of-score div{
     display: inline-block;
+    height: 100%;
+    vertical-align: top;
+    box-sizing: border-box;
 }
+
 .logoleft {
     width: 20%;
+    font-size: 35px;
+    position: relative;
+    left: 11px;
+    top: 2px;
+
 }
 .rankleft {
     width: 10%;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    top: 20px;
 }
 .textleft{ 
     width: 25%;
+    font-size: 29px;
+    position: relative;
+    top: 9px;
+    right: 7px;
 }
 .scoreleft {
     width: 40%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+    position: relative;
+    bottom: 5px;
+    right: 5px;
 }
 
 .scoreright{
-    width: 40%; 
+    width: 40%;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+    position: relative;
+    bottom: 5px;
+    left: 5px;
 }
 .textright {
     width: 25%;
+    font-size: 29px;
+    position: relative;
+    top: 9px;
+    left: 7px;
 }
 .rankright{
     width: 10%;
+    font-size: 16px;
+    text-align: center;
+    position: relative;
+    top: 20px;
 }
 .logoright{
     width: 20%;
+    font-size: 35px;
+    position: relative;
+    left: 11px;
+    top: 2px;
 }
-
 .bottom-of-score {
   height: 30%;
   background-color: black;
@@ -80,6 +124,7 @@ body {
 .time {
   height: 100%;
   width: 10%;
+  text-align: center;
 }
 .top-of-time {
   height: 60%;
@@ -87,37 +132,35 @@ body {
 .bottom-of-time {
   height: 40%;
 }
-
 .bottom-of-time div {
   display: inline-block;
+}
+.shot-clock{
+    color: yellow;
+    font-weight: bold;
 }
 
 .context {
   width: 40%;
 }
-
 .left-of-context {
   width: 60%;
   float: left;
 }
-
 .top-of-left-context {
   height: 60%;
 }
-
 .bottom-of-left-context {
   height: 40%;
 }
-
 .right-of-context {
   width: 40%;
 float: right;
+text-align: center;
 }
-
 .top-of-right-context {
   height: 50%;
 }
-
 .bottom-of-right-context {
   height: 50%;
 }
