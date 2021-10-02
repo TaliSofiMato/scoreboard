@@ -5,11 +5,11 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  /* font-size:  */
   height: 70px; 
   background-color: black;
-}
+  font-size: 0;
 
+}
 
 body {
     color: white;
@@ -19,13 +19,11 @@ body {
   height: 100%;
   display: inline-block;
   vertical-align: bottom;
+  font-size: 16px;
 }
 
 .scores {
   width: 40%;
-  height: 100%;
-
-
 }
 
 .score {
@@ -43,19 +41,19 @@ body {
 }
 
 .top-of-score {
-  height: 70%;
+    height: 70%;
 }
 .top-of-score div{
     display: inline-block;
 }
 .logoleft {
-width: 20%;
+    width: 20%;
 }
 .rankleft {
-width: 10%;
+    width: 10%;
 }
 .textleft{ 
-width: 25%;
+    width: 25%;
 }
 .scoreleft {
     width: 40%;
@@ -84,27 +82,23 @@ width: 25%;
   width: 10%;
 }
 .top-of-time {
-    height: 60%;
-  }
-  
-  .bottom-of-time {
-    height: 40%;
-  }
-  
-  .bottom-of-time div {
-    display: inline-block;
-  }
-
-.context {
-  width: 35%;
+  height: 60%;
+}
+.bottom-of-time {
+  height: 40%;
 }
 
-.context div {
-  float: left;
+.bottom-of-time div {
+  display: inline-block;
+}
+
+.context {
+  width: 40%;
 }
 
 .left-of-context {
   width: 60%;
+  float: left;
 }
 
 .top-of-left-context {
@@ -116,8 +110,8 @@ width: 25%;
 }
 
 .right-of-context {
-  width: 35%;
-display: block; 
+  width: 40%;
+float: right;
 }
 
 .top-of-right-context {
@@ -130,4 +124,5 @@ display: block;
 
 .station-logo {
     width: 10%;
+    text-align: center;
   }
