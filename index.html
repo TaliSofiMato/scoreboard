@@ -45,3 +45,26 @@
   <div class="main-item station-logo">ESPN</div>
 </div> 
 
+<script>
+    let timer = setInterval(()=>{
+        let clock = document.getElementsByClassName("top-of-time")[0]
+        let clockValue = clock.textContent
+        let numbers = clockValue.split(':')
+        let [minutes,seconds]=numbers
+        
+        if(seconds==0){
+            if (clockValue=='0:00') {
+                clock.textContent='end'
+                clearInterval(timer)
+            }
+            minutes = minutes-1;
+            seconds = 59
+            let newTime = [minutes, seconds].join(':')
+            clock.textContent = newTime
+        } else {
+            seconds = seconds-1
+            let newTime = [minutes, seconds].join(':')
+            clock.textContent = newTime
+        }
+    }, 1000)
+</script>
