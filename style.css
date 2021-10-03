@@ -12,6 +12,7 @@
 
 body {
     color: white;
+    font-family: sans-serif;
   }
 
 .main-item {
@@ -82,7 +83,8 @@ box-sizing: border-box;
     font-weight: bold;
     text-align: right;
     position: relative;
-    bottom: 5px;
+    left: 142px;
+    bottom: 53px;
     right: 5px;
 }
 
@@ -113,8 +115,8 @@ box-sizing: border-box;
     width: 20%;
     font-size: 35px;
     position: relative;
-    left: 11px;
-    top: 2px;
+    left: 197px;
+    top: -46px;
 }
 .bottom-of-score {
   height: 30%;
@@ -128,12 +130,14 @@ box-sizing: border-box;
 }
 .top-of-time {
   height: 60%;
+  font-size: 30px;
 }
 .bottom-of-time {
   height: 40%;
 }
 .bottom-of-time div {
   display: inline-block;
+  font-size: 20px;
 }
 .shot-clock{
     color: yellow;
@@ -149,9 +153,13 @@ box-sizing: border-box;
 }
 .top-of-left-context {
   height: 60%;
+  font-size: 18px;
+  position: relative;
+  top: 8px;
 }
 .bottom-of-left-context {
   height: 40%;
+  font-size: 20px;
 }
 .right-of-context {
   width: 40%;
@@ -160,12 +168,20 @@ text-align: center;
 }
 .top-of-right-context {
   height: 50%;
+  font-size: 19px;
+  font-weight: bold;
+  position: relative;
+  top: 7px;
 }
 .bottom-of-right-context {
   height: 50%;
+  font-size: 17px;
 }
 
 .station-logo {
     width: 10%;
     text-align: center;
+    font-size: 30px;
+    position: relative;
+    top: 15px;
   }
