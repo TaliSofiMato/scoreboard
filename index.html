@@ -62,7 +62,10 @@
             let newTime = [minutes, seconds].join(':')
             clock.textContent = newTime
         } else {
-            seconds = seconds-1
+            seconds = seconds - 1
+            if (seconds < 10) {
+                seconds = '0' + seconds
+            }
             let newTime = [minutes, seconds].join(':')
             clock.textContent = newTime
         }
