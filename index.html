@@ -1,6 +1,11 @@
  <link rel="stylesheet" href="style.css" >
 <button onclick="start()">Start</button>
 <button onclick="pause()">Pause</button>
+<button onclick="PHX3()">PHX 3 points</button>
+<button onclick="PHX2()">PHX 2 points</button>
+<button onclick="LAC2()">LAC 2 points</button>
+<button onclick="LAC3()">LAC 3 points</button>
+
  <div class="bar"> 
 
   <div class="main-item scores">
@@ -9,13 +14,13 @@
         <div class="logoleft">(/)</div>
         <div class="rankleft">2</div>
         <div class="textleft">PHX</div>
-        <div class="scoreleft">36</div>
+        <div class="scoreleft">0</div>
       </div>
       <div class="bottom-of-score">TIMEOUTS: 7</div>
     </div>
     <div class="score score-right ">
       <div class="top-of-score">
-        <div class="scoreright">26 </div>
+        <div class="scoreright">0</div>
         <div class="textright">LAC</div>
         <div class="rankright">2</div>
         <div class="logoright">(/)</div>
@@ -48,6 +53,26 @@
 
 <script>
     let timer
+    const PHX2 = () => {
+      let score = document.getElementsByClassName("scoreleft")[0]
+      let scoreValue = score.textContent
+      score.textContent = parseInt(scoreValue) + 2
+    }
+    const PHX3 = () => {
+      let score = document.getElementsByClassName("scoreleft")[0]
+      let scoreValue = score.textContent
+      score.textContent = parseInt(scoreValue) + 3
+    }
+    const LAC2 = () => {
+      let score = document.getElementsByClassName("scoreright")[0]
+      let scoreValue = score.textContent
+      score.textContent = parseInt(scoreValue) + 2
+    }
+    const LAC3 = () => {
+      let score = document.getElementsByClassName("scoreright")[0]
+      let scoreValue = score.textContent
+      score.textContent = parseInt(scoreValue) + 3
+    }
     const pause = () => {
       clearInterval(timer)
     }
