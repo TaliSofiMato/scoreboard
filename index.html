@@ -1,5 +1,5 @@
  <link rel="stylesheet" href="style.css" >
-
+<button onclick="start()">Start</button>
  <div class="bar"> 
 
   <div class="main-item scores">
@@ -24,7 +24,7 @@
   </div>
 
   <div class="main-item time">
-    <div class="top-of-time">11:19</div>
+    <div class="top-of-time">12:00</div>
     <div class="bottom-of-time">
       <div class="shot-clock">18</div>
       <div class="game-quarter">1st</div>
@@ -46,7 +46,8 @@
 </div> 
 
 <script>
-    let timer = setInterval(()=>{
+    let start = () => {
+      let timer = setInterval(()=>{
         let clock = document.getElementsByClassName("top-of-time")[0]
         let clockValue = clock.textContent
         let numbers = clockValue.split(':')
@@ -70,4 +71,6 @@
             clock.textContent = newTime
         }
     }, 1000)
+    }
+    
 </script>
