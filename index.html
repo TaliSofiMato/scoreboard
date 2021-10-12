@@ -1,6 +1,5 @@
  <link rel="stylesheet" href="style.css" >
-<button onclick="start()">Start</button>
-<button class="pause" disabled onclick="pause()">Pause</button>
+<button class="play" onclick="play()">Play</button>
 <button onclick="PHX3()">PHX 3 points</button>
 <button onclick="PHX2()">PHX 2 points</button>
 <button onclick="LAC2()">LAC 2 points</button>
@@ -73,36 +72,41 @@
       let scoreValue = score.textContent
       score.textContent = parseInt(scoreValue) + 3
     }
-    const pause = () => {
-      clearInterval(timer)
+
+    let state = {
+      gameStatus: "unstarted"
     }
-    const start = () => {
-      let pauseButton = document.getElementsByClassName("pause")[0]
-      pauseButton.disabled = false
-      timer = setInterval(()=>{
-        let clock = document.getElementsByClassName("top-of-time")[0]
-        let clockValue = clock.textContent
-        let numbers = clockValue.split(':')
-        let [minutes,seconds]=numbers
-        
-        if(seconds==0){
-            if (clockValue=='0:00') {
-                clock.textContent='end'
-                clearInterval(timer)
-            }
-            minutes = minutes-1;
-            seconds = 59
-            let newTime = [minutes, seconds].join(':')
-            clock.textContent = newTime
-        } else {
-            seconds = seconds - 1
-            if (seconds < 10) {
-                seconds = '0' + seconds
-            }
-            let newTime = [minutes, seconds].join(':')
-            clock.textContent = newTime
-        }
-      }, 1000)
+
+    const play = () => {
+      let playButton = document.getElementsByClassName("play")[0]
+      if (state.gameStatus == "unstarted") {
+        state.gameStatus = "started"
+        playButton.textContent = "pause"
+        timer = setInterval(()=>{
+          let clock = document.getElementsByClassName("top-of-time")[0]
+          let clockValue = clock.textContent
+          let numbers = clockValue.split(':')
+          let [minutes,seconds]=numbers
+          
+          if(seconds==0){
+              if (clockValue=='0:00') {
+                  clock.textContent='end'
+                  clearInterval(timer)
+              }
+              minutes = minutes-1;
+              seconds = 59
+              let newTime = [minutes, seconds].join(':')
+              clock.textContent = newTime
+          } else {
+              seconds = seconds - 1
+              if (seconds < 10) {
+                  seconds = '0' + seconds
+              }
+              let newTime = [minutes, seconds].join(':')
+              clock.textContent = newTime
+          }
+        }, 1000)
+      }
     }
-    
+      
 </script>
