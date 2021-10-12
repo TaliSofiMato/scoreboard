@@ -1,5 +1,6 @@
  <link rel="stylesheet" href="style.css" >
 <button onclick="start()">Start</button>
+<button onclick="pause()">Pause</button>
  <div class="bar"> 
 
   <div class="main-item scores">
@@ -46,8 +47,12 @@
 </div> 
 
 <script>
-    let start = () => {
-      let timer = setInterval(()=>{
+    let timer
+    const pause = () => {
+      clearInterval(timer)
+    }
+    const start = () => {
+      timer = setInterval(()=>{
         let clock = document.getElementsByClassName("top-of-time")[0]
         let clockValue = clock.textContent
         let numbers = clockValue.split(':')
@@ -70,7 +75,7 @@
             let newTime = [minutes, seconds].join(':')
             clock.textContent = newTime
         }
-    }, 1000)
+      }, 1000)
     }
     
 </script>
