@@ -1,6 +1,6 @@
  <link rel="stylesheet" href="style.css" >
 <button onclick="start()">Start</button>
-<button onclick="pause()">Pause</button>
+<button class="pause" disabled onclick="pause()">Pause</button>
 <button onclick="PHX3()">PHX 3 points</button>
 <button onclick="PHX2()">PHX 2 points</button>
 <button onclick="LAC2()">LAC 2 points</button>
@@ -77,6 +77,8 @@
       clearInterval(timer)
     }
     const start = () => {
+      let pauseButton = document.getElementsByClassName("pause")[0]
+      pauseButton.disabled = false
       timer = setInterval(()=>{
         let clock = document.getElementsByClassName("top-of-time")[0]
         let clockValue = clock.textContent
