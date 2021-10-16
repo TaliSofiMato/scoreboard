@@ -30,17 +30,33 @@ const play = () => {
     state.gameStatus = "Playing"
     playButton.textContent = "Pause"
     startTimer()
+    startShotClock()
   } else if (state.gameStatus == "Playing") {
     state.gameStatus = "Paused"
     playButton.textContent = "Resume"
     clearInterval(timer)
+    pauseShotClock()
   } else if (state.gameStatus == "Paused") {
     state.gameStatus = "Playing"
     playButton.textContent = "Pause"
     startTimer() 
+    startShotClock()
   }
 }
+const startShotClock = () => {
+  setInterval(() => {
+    let shotClock = document.getElementsByClassName("shot-clock") [0]
+    // get the value
+    let shotClockValue = shotClock.textContent
+    // calculate new value
+    shotClockValue = shotClockValue - 1
+    // set new value
+    shotClock.textContent = shotClockValue
+  }, 1000)
+}
+const pauseShotClock = () => {
 
+}
 const startTimer = () => { 
   timer = setInterval(()=>{
     let clock = document.getElementsByClassName("top-of-time")[0]
