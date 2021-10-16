@@ -1,4 +1,5 @@
-let timer
+let gameClock
+let shotClock
 const PHX2 = () => {
   let score = document.getElementsByClassName("scoreleft")[0]
   let scoreValue = score.textContent
@@ -38,7 +39,7 @@ const play = () => {
   } else if (state.gameStatus == "Playing") {
     state.gameStatus = "Paused"
     playButton.textContent = "Resume"
-    clearInterval(timer)
+    clearInterval(gameClock)
     pauseShotClock()
   } else if (state.gameStatus == "Paused") {
     state.gameStatus = "Playing"
@@ -48,7 +49,7 @@ const play = () => {
   }
 }
 const startShotClock = () => {
-  setInterval(() => {  
+  shotClock = setInterval(() => {  
     let shotClock = document.getElementsByClassName("shot-clock") [0]
     // get the value
     let shotClockValue = shotClock.textContent
@@ -71,10 +72,10 @@ const resetShotClock = () => {
   shotClock.textContent = 40
 }
 const pauseShotClock = () => {
-
+clearInterval(shotClock)
 }
 const startTimer = () => { 
-  timer = setInterval(()=>{
+  gameClock = setInterval(()=>{
     let clock = document.getElementsByClassName("top-of-time")[0]
     let clockValue = clock.textContent
     let numbers = clockValue.split(':')
@@ -83,7 +84,7 @@ const startTimer = () => {
     if(seconds==0){
         if (clockValue=='0:00') {
             clock.textContent='end'
-            clearInterval(timer)
+            clearInterval(gameClock)
         }
         minutes = minutes-1;
         seconds = 59
