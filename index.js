@@ -29,31 +29,7 @@ const play = () => {
   if (state.gameStatus == "Unstarted") {
     state.gameStatus = "Playing"
     playButton.textContent = "Pause"
-
-    timer = setInterval(()=>{
-      let clock = document.getElementsByClassName("top-of-time")[0]
-      let clockValue = clock.textContent
-      let numbers = clockValue.split(':')
-      let [minutes,seconds]=numbers
-      
-      if(seconds==0){
-          if (clockValue=='0:00') {
-              clock.textContent='end'
-              clearInterval(timer)
-          }
-          minutes = minutes-1;
-          seconds = 59
-          let newTime = [minutes, seconds].join(':')
-          clock.textContent = newTime
-      } else {
-          seconds = seconds - 1
-          if (seconds < 10) {
-              seconds = '0' + seconds
-          }
-          let newTime = [minutes, seconds].join(':')
-          clock.textContent = newTime
-      }
-    }, 1000)
+    startTimer()
   } else if (state.gameStatus == "Playing") {
     state.gameStatus = "Paused"
     playButton.textContent = "Resume"
@@ -61,30 +37,34 @@ const play = () => {
   } else if (state.gameStatus == "Paused") {
     state.gameStatus = "Playing"
     playButton.textContent = "Pause"
-    timer = setInterval(()=>{
-      let clock = document.getElementsByClassName("top-of-time")[0]
-      let clockValue = clock.textContent
-      let numbers = clockValue.split(':')
-      let [minutes,seconds]=numbers
-      
-      if(seconds==0){
-          if (clockValue=='0:00') {
-              clock.textContent='end'
-              clearInterval(timer)
-          }
-          minutes = minutes-1;
-          seconds = 59
-          let newTime = [minutes, seconds].join(':')
-          clock.textContent = newTime
-      } else {
-          seconds = seconds - 1
-          if (seconds < 10) {
-              seconds = '0' + seconds
-          }
-          let newTime = [minutes, seconds].join(':')
-          clock.textContent = newTime
-      }
-    }, 1000)
+    startTimer() 
   }
+}
+
+const startTimer = () => { 
+  timer = setInterval(()=>{
+    let clock = document.getElementsByClassName("top-of-time")[0]
+    let clockValue = clock.textContent
+    let numbers = clockValue.split(':')
+    let [minutes,seconds]=numbers
+    
+    if(seconds==0){
+        if (clockValue=='0:00') {
+            clock.textContent='end'
+            clearInterval(timer)
+        }
+        minutes = minutes-1;
+        seconds = 59
+        let newTime = [minutes, seconds].join(':')
+        clock.textContent = newTime
+    } else {
+        seconds = seconds - 1
+        if (seconds < 10) {
+            seconds = '0' + seconds
+        }
+        let newTime = [minutes, seconds].join(':')
+        clock.textContent = newTime
+    }
+  }, 1000)
 }
   
