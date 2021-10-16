@@ -44,17 +44,22 @@ const play = () => {
   }
 }
 const startShotClock = () => {
-  setInterval(() => {
+  setInterval(() => {  
     let shotClock = document.getElementsByClassName("shot-clock") [0]
     // get the value
     let shotClockValue = shotClock.textContent
+    if (shotClockValue==0){
+      shotClockValue = 40
+      shotClock.style.color = "yellow"
+      shotClock.textContent = shotClockValue
+      } else {
     // substract the new value
     shotClockValue = shotClockValue - 1
     // set new value
     shotClock.textContent = shotClockValue
     if (shotClockValue == 5) {
       shotClock.style.color = "red"
-    }
+    } }
   }, 1000)
 }
 const pauseShotClock = () => {
