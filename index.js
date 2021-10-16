@@ -3,21 +3,25 @@ const PHX2 = () => {
   let score = document.getElementsByClassName("scoreleft")[0]
   let scoreValue = score.textContent
   score.textContent = parseInt(scoreValue) + 2
+  resetShotClock()
 }
 const PHX3 = () => {
   let score = document.getElementsByClassName("scoreleft")[0]
   let scoreValue = score.textContent
   score.textContent = parseInt(scoreValue) + 3
+  resetShotClock()
 }
 const LAC2 = () => {
   let score = document.getElementsByClassName("scoreright")[0]
   let scoreValue = score.textContent
   score.textContent = parseInt(scoreValue) + 2
+  resetShotClock()
 }
 const LAC3 = () => {
   let score = document.getElementsByClassName("scoreright")[0]
   let scoreValue = score.textContent
   score.textContent = parseInt(scoreValue) + 3
+  resetShotClock()
 }
 
 let state = {
@@ -61,6 +65,10 @@ const startShotClock = () => {
       shotClock.style.color = "red"
     } }
   }, 1000)
+}
+const resetShotClock = () => {
+  let shotClock = document.getElementsByClassName("shot-clock") [0]
+  shotClock.textContent = 40
 }
 const pauseShotClock = () => {
 
