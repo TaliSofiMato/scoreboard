@@ -31,17 +31,17 @@ let state = {
 
 const play = () => {
   let playButton = document.getElementsByClassName("play")[0]
-  if (state.gameStatus == "Unstarted") {
+  if (state.gameStatus === "Unstarted") {
     state.gameStatus = "Playing"
     playButton.textContent = "Pause"
     startTimer()
     startShotClock()
-  } else if (state.gameStatus == "Playing") {
+  } else if (state.gameStatus === "Playing") {
     state.gameStatus = "Paused"
     playButton.textContent = "Resume"
     clearInterval(gameClock)
     pauseShotClock()
-  } else if (state.gameStatus == "Paused") {
+  } else if (state.gameStatus === "Paused") {
     state.gameStatus = "Playing"
     playButton.textContent = "Pause"
     startTimer() 
@@ -53,7 +53,7 @@ const startShotClock = () => {
     let shotClock = document.getElementsByClassName("shot-clock") [0]
     // get the value
     let shotClockValue = shotClock.textContent
-    if (shotClockValue==0){
+    if (shotClockValue===0){
       shotClockValue = 40
       shotClock.style.color = "yellow"
       shotClock.textContent = shotClockValue
@@ -62,7 +62,7 @@ const startShotClock = () => {
       shotClockValue = shotClockValue - 1
       // set new value
       shotClock.textContent = shotClockValue
-      if (shotClockValue == 5) {
+      if (shotClockValue === 5) {
         shotClock.style.color = "red"
       } 
     }
@@ -81,23 +81,24 @@ const startTimer = () => {
     let clockValue = clock.textContent
     let numbers = clockValue.split(':')
     let [minutes,seconds]=numbers
-    
-    if(seconds==0){
-        if (clockValue=='0:00') {
-            clock.textContent='end'
-            clearInterval(gameClock)
-        }
-        minutes = minutes-1;
+    debugger
+    if (clockValue==='0:00') { 
+      clock.textContent='end'
+      clearInterval(gameClock)
+    } else {
+      if (seconds==='00') {
+        minutes = minutes - 1;
         seconds = 59
         let newTime = [minutes, seconds].join(':')
         clock.textContent = newTime
-    } else {
+      } else {
         seconds = seconds - 1
         if (seconds < 10) {
             seconds = '0' + seconds
         }
         let newTime = [minutes, seconds].join(':')
         clock.textContent = newTime
+      }
     }
   }, 1000)
 }
