@@ -53,7 +53,7 @@ const startShotClock = () => {
     let shotClock = document.getElementsByClassName("shot-clock") [0]
     // get the value
     let shotClockValue = shotClock.textContent
-    if (shotClockValue===0){
+    if (shotClockValue==='0'){
       shotClockValue = 40
       shotClock.style.color = "yellow"
       shotClock.textContent = shotClockValue
@@ -81,10 +81,11 @@ const startTimer = () => {
     let clockValue = clock.textContent
     let numbers = clockValue.split(':')
     let [minutes,seconds]=numbers
-    debugger
+
     if (clockValue==='0:00') { 
       clock.textContent='end'
       clearInterval(gameClock)
+      clearInterval(shotClock)
     } else {
       if (seconds==='00') {
         minutes = minutes - 1;
