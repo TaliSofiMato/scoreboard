@@ -57,14 +57,15 @@ const startShotClock = () => {
       shotClockValue = 40
       shotClock.style.color = "yellow"
       shotClock.textContent = shotClockValue
-      } else {
-    // substract the new value
-    shotClockValue = shotClockValue - 1
-    // set new value
-    shotClock.textContent = shotClockValue
-    if (shotClockValue == 5) {
-      shotClock.style.color = "red"
-    } }
+    } else {
+      // substract the new value
+      shotClockValue = shotClockValue - 1
+      // set new value
+      shotClock.textContent = shotClockValue
+      if (shotClockValue == 5) {
+        shotClock.style.color = "red"
+      } 
+    }
   }, 1000)
 }
 const resetShotClock = () => {
@@ -72,7 +73,7 @@ const resetShotClock = () => {
   shotClock.textContent = 40
 }
 const pauseShotClock = () => {
-clearInterval(shotClock)
+  clearInterval(shotClock)
 }
 const startTimer = () => { 
   gameClock = setInterval(()=>{
