@@ -1,5 +1,4 @@
-let gameClock
-let shotClock
+
 const PHX2 = () => {
   let score = document.getElementsByClassName("scoreleft")[0]
   let scoreValue = score.textContent
@@ -26,7 +25,12 @@ const LAC3 = () => {
 }
 
 let state = {
-  gameStatus: "Unstarted"
+  gameStatus: "Unstarted",
+  gameClock: "12:00",
+  gameClockTimer: null,
+  shotClock: "40",
+  shotClockTimer: null,
+  gameQuarter: "1st"
 }
 
 const play = () => {
@@ -39,7 +43,7 @@ const play = () => {
   } else if (state.gameStatus === "Playing") {
     state.gameStatus = "Paused"
     playButton.textContent = "Resume"
-    clearInterval(gameClock)
+    clearInterval(state.gameClockTimer)
     pauseShotClock()
   } else if (state.gameStatus === "Paused") {
     state.gameStatus = "Playing"
@@ -49,7 +53,7 @@ const play = () => {
   }
 }
 const startShotClock = () => {
-  shotClock = setInterval(() => {  
+  state.shotClockTimer = setInterval(() => {  
     let shotClock = document.getElementsByClassName("shot-clock") [0]
     // get the value
     let shotClockValue = shotClock.textContent
@@ -73,10 +77,10 @@ const resetShotClock = () => {
   shotClock.textContent = 40
 }
 const pauseShotClock = () => {
-  clearInterval(shotClock)
+  clearInterval(state.shotClockTimer)
 }
 const startTimer = () => { 
-  gameClock = setInterval(()=>{
+  state.gameClockTimer = setInterval(()=>{
     let clock = document.getElementsByClassName("top-of-time")[0]
     let clockValue = clock.textContent
     let numbers = clockValue.split(':')
@@ -84,8 +88,11 @@ const startTimer = () => {
 
     if (clockValue==='0:00') { 
       clock.textContent='end'
-      clearInterval(gameClock)
-      clearInterval(shotClock)
+      clearInterval(state.gameClockTimer)
+      clearInterval(state.shotClockTimer)
+      setTimeout(()=>{
+      prepClock()
+      },3000)
     } else {
       if (seconds==='00') {
         minutes = minutes - 1;
@@ -103,4 +110,8 @@ const startTimer = () => {
     }
   }, 1000)
 }
-  
+
+const prepClock = () => {
+state.gameQuarter = "2nd"
+
+}
