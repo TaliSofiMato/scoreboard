@@ -91,7 +91,7 @@ const startTimer = () => {
       clearInterval(state.gameClockTimer)
       clearInterval(state.shotClockTimer)
       setTimeout(()=>{
-      prepClock()
+        prepClock()
       },3000)
     } else {
       if (seconds==='00') {
@@ -112,6 +112,17 @@ const startTimer = () => {
 }
 
 const prepClock = () => {
-state.gameQuarter = "2nd"
-
+  state.gameQuarter = "2nd"
+  state.gameClock = "12:00"
+  state.gameStatus = "Unstarted"
+  state.shotClock = 40
+  renderGameClock()
+}
+const renderGameClock = () => {
+  let gameClock = document.getElementsByClassName("top-of-time") [0]
+  let shotClock = document.getElementsByClassName("shot-clock") [0]
+  let gameQuarter = document.getElementsByClassName("game-quarter") [0]
+  gameClock.textContent = state.gameClock
+  shotClock.textContent = state.shotClock
+  gameQuarter.textContent = state.gameQuarter
 }
