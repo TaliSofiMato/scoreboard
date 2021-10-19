@@ -37,17 +37,17 @@ const play = () => {
   let playButton = document.getElementsByClassName("play")[0]
   if (state.gameStatus === "Unstarted") {
     state.gameStatus = "Playing"
-    playButton.textContent = "Pause"
+    renderPlayButton()
     startTimer()
     startShotClock()
   } else if (state.gameStatus === "Playing") {
     state.gameStatus = "Paused"
-    playButton.textContent = "Resume"
+    renderPlayButton()
     clearInterval(state.gameClockTimer)
     pauseShotClock()
   } else if (state.gameStatus === "Paused") {
     state.gameStatus = "Playing"
-    playButton.textContent = "Pause"
+    renderPlayButton()
     startTimer() 
     startShotClock()
   }
@@ -92,6 +92,7 @@ const startTimer = () => {
       clearInterval(state.shotClockTimer)
       setTimeout(()=>{
         prepClock()
+        renderPlayButton()
       },3000)
     } else {
       if (seconds==='00') {
@@ -125,4 +126,13 @@ const renderGameClock = () => {
   gameClock.textContent = state.gameClock
   shotClock.textContent = state.shotClock
   gameQuarter.textContent = state.gameQuarter
+}
+const renderPlayButton = ( ) => {
+  let playButton = document.getElementsByClassName("play")[0]
+  const labels = {
+    "Unstarted": "Play",
+    "Playing": "Pause",
+    "Paused": "Resume"
+  }
+  playButton.textContent = labels[state.gameStatus]
 }
