@@ -136,3 +136,10 @@ const renderPlayButton = ( ) => {
   }
   playButton.textContent = labels[state.gameStatus]
 }
+const avarage = (totals) => {
+  let sum = 0
+  totals.forEach((i) => {
+      sum = sum + i
+  } )
+  return sum / totals.length
+}
