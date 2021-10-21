@@ -30,7 +30,14 @@ let state = {
   gameClockTimer: null,
   shotClock: "40",
   shotClockTimer: null,
-  gameQuarter: "1st"
+  gameQuarter: "1st",
+  phxScore: 0,
+  lacScore: 0,
+  timeoutPhx: 7,
+  timeoutLac: 7,
+  phxRank: 2,
+  lacRank: 4
+
 }
 
 const play = () => {
@@ -119,6 +126,27 @@ const prepClock = () => {
   state.shotClock = 40
   renderGameClock()
 }
+const render = () => {
+  renderGameClock()
+  renderScores()
+  renderTimeOuts()
+  renderButtons()
+}
+const renderScores = () => {
+  let phxScore = document.getElementsByClassName("scoreleft")[0]
+  let lacScore = document.getElementsByClassName("scoreright")[0]
+  phxScore.textContent = state.phxScore
+  lacScore.textContent = state.lacScore
+}
+const renderTimeOuts = () => {
+  let timeoutPhx = document.getElementsByClassName("timeoutlac")[0]
+  let timeoutLac = document.getElementsByClassName("timeoutphx")[0]
+  timeoutPhx.textContent = state.timeoutPhx
+  timeoutLac.textContent = state.timeoutLac
+}
+const renderButtons = () => {
+  renderPlayButton()
+}
 const renderGameClock = () => {
   let gameClock = document.getElementsByClassName("top-of-time") [0]
   let shotClock = document.getElementsByClassName("shot-clock") [0]
@@ -136,10 +164,5 @@ const renderPlayButton = ( ) => {
   }
   playButton.textContent = labels[state.gameStatus]
 }
-const avarage = (totals) => {
-  let sum = 0
-  totals.forEach((i) => {
-      sum = sum + i
-  } )
-  return sum / totals.length
-}
+
+render()
