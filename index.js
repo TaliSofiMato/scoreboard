@@ -165,4 +165,4 @@ const renderPlayButton = ( ) => {
   playButton.textContent = labels[state.gameStatus]
 }
 
-render()
+window.onload = render

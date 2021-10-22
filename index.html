@@ -1,53 +1,60 @@
-<link rel="stylesheet" href="style.css" >
-<button class="play" onclick="play()">Play</button>
-<button onclick="PHX3()">PHX 3 points</button>
-<button onclick="PHX2()">PHX 2 points</button>
-<button onclick="LAC2()">LAC 2 points</button>
-<button onclick="LAC3()">LAC 3 points</button>
+<html> 
+  <head>
+    <link rel="stylesheet" href="style.css" >
+    <script src="index.js"></script>
+  </head>
 
-<div class="bar"> 
+  <body> 
+    <button class="play" onclick="play()">Play</button>
+    <button onclick="PHX3()">PHX 3 points</button>
+    <button onclick="PHX2()">PHX 2 points</button>
+    <button onclick="LAC2()">LAC 2 points</button>
+    <button onclick="LAC3()">LAC 3 points</button>
 
-  <div class="main-item scores">
+    <div class="bar"> 
 
-    <div class="score score-left">
-      <div class="top-of-score">
-        <div class="logoleft">(/)</div>
-        <div class="rankleft"></div>
-        <div class="textleft">PHX</div>
-        <div class="scoreleft"></div>
+      <div class="main-item scores">
+
+        <div class="score score-left">
+          <div class="top-of-score">
+            <div class="logoleft">(/)</div>
+            <div class="rankleft"></div>
+            <div class="textleft">PHX</div>
+            <div class="scoreleft"></div>
+          </div>
+          <div class="bottom-of-score timeoutphx">TIMEOUTS:</div>
+        </div>
+        <div class="score score-right ">
+          <div class="top-of-score">
+            <div class="scoreright"></div>
+            <div class="textright">LAC</div>
+            <div class="rankright"></div>
+            <div class="logoright">(/)</div>
+          </div>
+          <div class="bottom-of-score timeoutlac" >TIMEOUTS:</div>
+        </div>
       </div>
-      <div class="bottom-of-score timeoutphx">TIMEOUTS:</div>
-    </div>
-    <div class="score score-right ">
-      <div class="top-of-score">
-        <div class="scoreright"></div>
-        <div class="textright">LAC</div>
-        <div class="rankright"></div>
-        <div class="logoright">(/)</div>
+
+      <div class="main-item time">
+        <div class="top-of-time"></div>
+        <div class="bottom-of-time">
+          <div class="shot-clock"></div>
+          <div class="game-quarter"></div>
+        </div>
       </div>
-      <div class="bottom-of-score timeoutlac" >TIMEOUTS:</div>
-    </div>
-  </div>
 
-  <div class="main-item time">
-    <div class="top-of-time"></div>
-    <div class="bottom-of-time">
-      <div class="shot-clock"></div>
-      <div class="game-quarter"></div>
-    </div>
-  </div>
+      <div class="main-item context">
+        <div class="left-of-context">
+          <div class="top-of-left-context">WESTERN CONFERENCE FINALS</div>
+          <div class="bottom-of-left-context">Presented by @ AT&T</div>
+        </div>
+        <div class="right-of-context">
+          <div class="top-of-right-context">GAME 4</div>
+          <div class="bottom-of-right-context">PHX LEADS 2-1</div>
+        </div>
+      </div>
 
-  <div class="main-item context">
-    <div class="left-of-context">
-      <div class="top-of-left-context">WESTERN CONFERENCE FINALS</div>
-      <div class="bottom-of-left-context">Presented by @ AT&T</div>
-    </div>
-    <div class="right-of-context">
-      <div class="top-of-right-context">GAME 4</div>
-      <div class="bottom-of-right-context">PHX LEADS 2-1</div>
-    </div>
-  </div>
-
-  <div class="main-item station-logo">ESPN</div>
-</div> 
-<script src="index.js"></script>
+      <div class="main-item station-logo">ESPN</div>
+    </div> 
+  </body>
+</html>
