@@ -35,7 +35,7 @@ let state = {
   lacScore: 0,
   timeoutPhx: 7,
   timeoutLac: 7,
-  phxRank: 2,
+  phxRank: 2, 
   lacRank: 4
 
 }
@@ -141,8 +141,8 @@ const renderScores = () => {
 const renderTimeOuts = () => {
   let timeoutPhx = document.getElementsByClassName("timeoutlac")[0]
   let timeoutLac = document.getElementsByClassName("timeoutphx")[0]
-  timeoutPhx.textContent = state.timeoutPhx
-  timeoutLac.textContent = state.timeoutLac
+  timeoutPhx.textContent = "Timeout:" + state.timeoutPhx
+  timeoutLac.textContent = "Timeout:" + state.timeoutLac
 }
 const renderButtons = () => {
   renderPlayButton()
