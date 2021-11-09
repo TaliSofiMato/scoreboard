@@ -1,27 +1,23 @@
 
 const PHX2 = () => {
-    let score = document.getElementsByClassName("scoreleft")[0]
-    let scoreValue = score.textContent
-    score.textContent = parseInt(scoreValue) + 2
-    resetShotClock()
+  state.phxScore = state.phxScore +2
+  renderScores()
+  resetShotClock()
 }
 const PHX3 = () => {
-    let score = document.getElementsByClassName("scoreleft")[0]
-    let scoreValue = score.textContent
-    score.textContent = parseInt(scoreValue) + 3
-    resetShotClock()
+  state.phxScore = state.phxScore + 3
+  renderScores()
+  resetShotClock()
 }
 const LAC2 = () => {
-    let score = document.getElementsByClassName("scoreright")[0]
-    let scoreValue = score.textContent
-    score.textContent = parseInt(scoreValue) + 2
-    resetShotClock()
+  state.lacScore = state.lacScore + 2
+  renderScores()
+  resetShotClock()
 }
 const LAC3 = () => {
-    let score = document.getElementsByClassName("scoreright")[0]
-    let scoreValue = score.textContent
-    score.textContent = parseInt(scoreValue) + 3
-    resetShotClock()
+  state.lacScore = state.lacScore + 3
+  renderScores() 
+  resetShotClock()
 }
 
 const play = () => {
