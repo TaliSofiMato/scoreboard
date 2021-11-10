@@ -21,7 +21,6 @@ const LAC3 = () => {
 }
 
 const play = () => {
-    let playButton = document.getElementsByClassName("play")[0]
     if (state.gameStatus === "Unstarted") {
       state.gameStatus = "Playing"
       renderPlayButton()
