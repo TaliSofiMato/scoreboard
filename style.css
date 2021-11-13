@@ -33,13 +33,13 @@ body {
   height: 100%;
 }
 
-.score-left {
+.home-section {
   background-color: orange;
   border:1px solid black;
 box-sizing: border-box;
 }
 
-.score-right {
+.visitor-section {
   background-color: grey;
   border:1px solid black;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ box-sizing: border-box;
     box-sizing: border-box;
 }
 
-.logoleft {
+.home-logo {
     width: 20%;
     font-size: 35px;
     position: relative;
@@ -63,21 +63,21 @@ box-sizing: border-box;
     top: 2px;
 
 }
-.rankleft {
+.home-rank {
     width: 10%;
     font-size: 16px;
     text-align: center;
     position: relative;
     top: 20px;
 }
-.textleft{ 
+.home-text{ 
     width: 25%;
     font-size: 29px;
     position: relative;
     top: 9px;
     right: 7px;
 }
-.scoreleft {
+.home-score{
     width: 40%;
     font-size: 50px;
     font-weight: bold;
@@ -88,7 +88,7 @@ box-sizing: border-box;
     right: 5px;
 }
 
-.scoreright{
+.visitor-score{
     width: 40%;
     font-size: 50px;
     font-weight: bold;
@@ -97,26 +97,26 @@ box-sizing: border-box;
     bottom: 5px;
     left: 5px;
 }
-.textright {
+.visitor-text {
     width: 25%;
     font-size: 29px;
     position: relative;
     top: 9px;
     left: 7px;
 }
-.rankright{
+.visitor-rank{
     width: 10%;
     font-size: 16px;
     text-align: center;
     position: relative;
     top: 20px;
 }
-.logoright{
+.visitor-logo{
     width: 20%;
     font-size: 35px;
     position: relative;
-    left: 197px;
-    top: -46px;
+    left: 32px;
+    top: 0px;
 }
 .bottom-of-score {
   height: 30%;

@@ -6,14 +6,14 @@ const render = () => {
     renderShotClock()
   }
   const renderScores = () => {
-    let homeScore = document.getElementsByClassName("scoreleft")[0]
-    let visitorScore = document.getElementsByClassName("scoreright")[0]
+    let homeScore = document.getElementsByClassName("home-score")[0]
+    let visitorScore = document.getElementsByClassName("visitor-score")[0]
     homeScore.textContent = state.homeScore
     visitorScore.textContent = state.visitorScore
   }
   const renderTimeOuts = () => {
-    let timeoutHome = document.getElementsByClassName("timeoutlac")[0]
-    let timeoutVisitor = document.getElementsByClassName("timeoutphx")[0]
+    let timeoutHome = document.getElementsByClassName("timeout-home")[0]
+    let timeoutVisitor = document.getElementsByClassName("timeout-visitor")[0]
     timeoutHome.textContent = "Timeout:" + state.timeoutHome
     timeoutVisitor.textContent = "Timeout:" + state.timeoutVisitor
   }
