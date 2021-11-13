@@ -90,10 +90,18 @@ const play = () => {
   }
   
   const prepClock = () => {
-    state.gameQuarter = "2nd"
-    state.gameClock = "12:00"
+    const quarters = {
+      "1st":"2nd",
+      "2nd":"3rd",
+      "3rd":"4th",
+    }
+    state.gameQuarter = quarters[state.gameQuarter]
+    state.gameClock = "0:01"
     state.gameStatus = "Unstarted"
     state.shotClock = 40
     renderGameClock()
+    renderShotClock()
   }
+
+  
   

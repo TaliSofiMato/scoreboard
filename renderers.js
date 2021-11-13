@@ -5,6 +5,12 @@ const render = () => {
     renderButtons()
     renderShotClock()
   }
+  const renderGameClock = () => {
+    let gameClock = document.getElementsByClassName("top-of-time") [0]
+    let gameQuarter = document.getElementsByClassName("game-quarter") [0]
+    gameClock.textContent = state.gameClock
+    gameQuarter.textContent = state.gameQuarter
+  }
   const renderScores = () => {
     let homeScore = document.getElementsByClassName("home-score")[0]
     let visitorScore = document.getElementsByClassName("visitor-score")[0]
@@ -20,12 +26,7 @@ const render = () => {
   const renderButtons = () => {
     renderPlayButton()
   }
-  const renderGameClock = () => {
-    let gameClock = document.getElementsByClassName("top-of-time") [0]
-    let gameQuarter = document.getElementsByClassName("game-quarter") [0]
-    gameClock.textContent = state.gameClock
-    gameQuarter.textContent = state.gameQuarter
-  }
+
   const renderShotClock = () => {
     let shotClock = document.getElementsByClassName("shot-clock") [0]
     shotClock.textContent = state.shotClock
@@ -44,4 +45,4 @@ const render = () => {
     }
     playButton.textContent = labels[state.gameStatus]
   }
-  
+
