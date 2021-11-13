@@ -40,27 +40,18 @@ const play = () => {
   }
   const startShotClock = () => {
     state.shotClockTimer = setInterval(() => {  
-      let shotClock = document.getElementsByClassName("shot-clock") [0]
-      // get the value
-      let shotClockValue = shotClock.textContent
-      if (shotClockValue==='0'){
-        shotClockValue = 40
-        shotClock.style.color = "yellow"
-        shotClock.textContent = shotClockValue
+      if (state.shotClock ===0) {
+        state.shotClock = 40
+        renderShotClock()
       } else {
-        // substract the new value
-        shotClockValue = shotClockValue - 1
-        // set new value
-        shotClock.textContent = shotClockValue
-        if (shotClockValue === 5) {
-          shotClock.style.color = "red"
-        } 
+        state.shotClock = state.shotClock - 1
+        renderShotClock()
       }
     }, 1000)
   }
   const resetShotClock = () => {
-    let shotClock = document.getElementsByClassName("shot-clock") [0]
-    shotClock.textContent = 40
+    state.shotClock = 40
+    renderShotClock()
   }
   const pauseShotClock = () => {
     clearInterval(state.shotClockTimer)

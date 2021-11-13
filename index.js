@@ -12,6 +12,5 @@ let state = {
   timeoutLac: 7,
   phxRank: 2, 
   lacRank: 4
-
 }
 window.onload = render
