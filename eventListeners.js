@@ -1,15 +1,14 @@
-
-const homeScore = (num) => {
+const swish = (team,num) => {
+  if (team === 'home') {
   state.homeScore = state.homeScore + num
-  renderScores()
-  resetShotClock()
-}
-const visitorScore = (num) => {
-  state.visitorScore = state.visitorScore + num
   renderScores() 
   resetShotClock()
+  } else if (team === 'visitor') {
+    state.visitorScore = state.visitorScore + num
+    renderScores() 
+    resetShotClock()
+  }
 }
-
 const play = () => {
     if (state.gameStatus === "Unstarted") {
       state.gameStatus = "Playing"
