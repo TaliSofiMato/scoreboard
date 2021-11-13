@@ -1,21 +1,11 @@
 
-const home2 = () => {
-  state.homeScore = state.homeScore +2
+const homeScore = (num) => {
+  state.homeScore = state.homeScore + num
   renderScores()
   resetShotClock()
 }
-const home3 = () => {
-  state.homeScore = state.homeScore + 3
-  renderScores()
-  resetShotClock()
-}
-const visitor2 = () => {
-  state.visitorScore = state.visitorScore + 2
-  renderScores()
-  resetShotClock()
-}
-const visitor3 = () => {
-  state.visitorScore = state.visitorScore + 3
+const visitorScore = (num) => {
+  state.visitorScore = state.visitorScore + num
   renderScores() 
   resetShotClock()
 }
