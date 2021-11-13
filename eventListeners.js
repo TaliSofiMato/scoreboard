@@ -1,21 +1,21 @@
 
-const PHX2 = () => {
-  state.phxScore = state.phxScore +2
+const home2 = () => {
+  state.homeScore = state.homeScore +2
   renderScores()
   resetShotClock()
 }
-const PHX3 = () => {
-  state.phxScore = state.phxScore + 3
+const home3 = () => {
+  state.homeScore = state.homeScore + 3
   renderScores()
   resetShotClock()
 }
-const LAC2 = () => {
-  state.lacScore = state.lacScore + 2
+const visitor2 = () => {
+  state.visitorScore = state.visitorScore + 2
   renderScores()
   resetShotClock()
 }
-const LAC3 = () => {
-  state.lacScore = state.lacScore + 3
+const visitor3 = () => {
+  state.visitorScore = state.visitorScore + 3
   renderScores() 
   resetShotClock()
 }

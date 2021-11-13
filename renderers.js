@@ -6,16 +6,16 @@ const render = () => {
     renderShotClock()
   }
   const renderScores = () => {
-    let phxScore = document.getElementsByClassName("scoreleft")[0]
-    let lacScore = document.getElementsByClassName("scoreright")[0]
-    phxScore.textContent = state.phxScore
-    lacScore.textContent = state.lacScore
+    let homeScore = document.getElementsByClassName("scoreleft")[0]
+    let visitorScore = document.getElementsByClassName("scoreright")[0]
+    homeScore.textContent = state.homeScore
+    visitorScore.textContent = state.visitorScore
   }
   const renderTimeOuts = () => {
-    let timeoutPhx = document.getElementsByClassName("timeoutlac")[0]
-    let timeoutLac = document.getElementsByClassName("timeoutphx")[0]
-    timeoutPhx.textContent = "Timeout:" + state.timeoutPhx
-    timeoutLac.textContent = "Timeout:" + state.timeoutLac
+    let timeoutHome = document.getElementsByClassName("timeoutlac")[0]
+    let timeoutVisitor = document.getElementsByClassName("timeoutphx")[0]
+    timeoutHome.textContent = "Timeout:" + state.timeoutHome
+    timeoutVisitor.textContent = "Timeout:" + state.timeoutVisitor
   }
   const renderButtons = () => {
     renderPlayButton()

@@ -6,11 +6,11 @@ let state = {
   shotClock: "40",
   shotClockTimer: null,
   gameQuarter: "1st",
-  phxScore: 0,
-  lacScore: 0,
-  timeoutPhx: 7,
-  timeoutLac: 7,
-  phxRank: 2, 
-  lacRank: 4
+  homeScore: 0,
+  visitorScore: 0,
+  timeoutHome: 7,
+  timeoutVisitor: 7,
+  homeRank: 2, 
+  visitorRank: 4
 }
 window.onload = render
