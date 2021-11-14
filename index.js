@@ -1,7 +1,7 @@
 
 let state = {
   gameStatus: "Unstarted",
-  gameClock: "0:05",
+  gameClock: "12:00",
   gameClockTimer: null,
   shotClock: "40",
   shotClockTimer: null,
