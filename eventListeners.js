@@ -8,22 +8,27 @@ const swish = (team,num) => {
   resetShotClock()
 }
 const play = () => {
-    if (state.gameStatus === "Unstarted") {
-      state.gameStatus = "Playing"
-      renderPlayButton()
-      startTimer()
-      startShotClock()
-    } else if (state.gameStatus === "Playing") {
-      state.gameStatus = "Paused"
-      renderPlayButton()
-      clearInterval(state.gameClockTimer)
-      pauseShotClock()
-    } else if (state.gameStatus === "Paused") {
-      state.gameStatus = "Playing"
-      renderPlayButton()
-      startTimer() 
-      startShotClock()
+    const playFunctions = {
+      "Unstarted": () => {
+        state.gameStatus = "Playing"
+        renderPlayButton()
+        startTimer()
+        startShotClock()
+      },
+      "Playing": () => {
+        state.gameStatus = "Paused"
+        renderPlayButton()
+        startTimer()
+        startShotClock()
+      },
+      "Paused": () => {
+        state.gameStatus = "Playing"
+        renderPlayButton()
+        startTimer() 
+        startShotClock()
+      },
     }
+    playFunctions[state.gameStatus]()
   }
   const startShotClock = () => {
     state.shotClockTimer = setInterval(() => {  
