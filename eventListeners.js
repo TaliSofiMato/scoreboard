@@ -6,6 +6,7 @@ const swish = (team,num) => {
   }
   renderScores() 
   resetShotClock()
+  renderScoreButtons()
 }
 const play = () => {
     const playFunctions = {
