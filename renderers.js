@@ -5,6 +5,7 @@ const render = () => {
   renderShotClock()
   renderPlayButton()
   renderScoreButtons()
+  renderTeamNames()
 }
 const renderGameClock = () => {
   let gameClock = document.getElementsByClassName("top-of-time") [0]
@@ -46,12 +47,23 @@ const renderPlayButton = ( ) => {
 const renderScoreButtons = () => {
   let scoreButtons = document.getElementsByClassName("score-button")
   Array.from(scoreButtons).forEach((button) => {
-    const buttonLabels ={
+    const buttonLabels = {
      "home3" : state.homeTeam + " 3 points",
      "home2" : state.homeTeam + " 2 points",
      "visitor2": state.visitorTeam + " 2 points",
      "visitor3": state.visitorTeam + " 3 points"
     } 
     button.textContent = buttonLabels[button.classList [1]]
+  });
+}
+
+const renderTeamNames = () => {
+  let teamNames = document.getElementsByClassName("team-name")
+  Array.from(teamNames).forEach((team) => {
+    const teamLabels = {
+    "home": state.homeTeam,
+    "visitor": state.visitorTeam
+    }
+    team.textContent = teamLabels[team.classList [1]]
   });
 }

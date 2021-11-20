@@ -79,7 +79,7 @@ const play = () => {
   
   const prepClock = () => {
     const quarters = {
-      "1st":"2nd",
+      "1st":"2nd", 
       "2nd":"3rd",
       "3rd":"4th",
     }
@@ -90,6 +90,3 @@ const play = () => {
     renderGameClock()
     renderShotClock()
   }
-
-  
-  

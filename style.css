@@ -70,7 +70,7 @@ box-sizing: border-box;
     position: relative;
     top: 20px;
 }
-.home-text{ 
+.home { 
     width: 25%;
     font-size: 29px;
     position: relative;
@@ -97,7 +97,7 @@ box-sizing: border-box;
     bottom: 5px;
     left: 5px;
 }
-.visitor-text {
+.visitor {
     width: 25%;
     font-size: 29px;
     position: relative;
