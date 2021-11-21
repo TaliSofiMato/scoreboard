@@ -1,4 +1,5 @@
 const swish = (team,num) => {
+  if (state.gameStatus === "Playing") {  
   if (team === 'home') {
   state.homeScore = state.homeScore + num
   } else if (team === 'visitor') {
@@ -7,7 +8,7 @@ const swish = (team,num) => {
   render() 
   resetShotClock()
   renderScoreButtons()
-}
+}}
 const play = () => {
     if (state.gameStatus === "Unstarted") {
       state.gameStatus = "Playing"
