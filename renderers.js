@@ -77,3 +77,4 @@ const renderRanks = () => {
     }
     rank.textContent = rankLabels[rank.classList [1]]
   });
+}

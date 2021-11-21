@@ -48,13 +48,19 @@ box-sizing: border-box;
 .top-of-score {
     height: 70%;
 }
-.top-of-score div{
-    /* display: inline-block; */
+ .visitor-top-of-score > div{
     height: 100%;
     vertical-align: top;
     box-sizing: border-box;
     float: left;
     position: relative;
+}
+
+ .home-top-of-score > div{
+  height: 100%;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .home-logo {
@@ -84,10 +90,10 @@ box-sizing: border-box;
     font-size: 50px;
     font-weight: bold;
     text-align: right;
-    float: right;
     left: 142px;
     bottom: 53px;
     right: 5px;
+    margin: 0px;
 }
 
 .visitor-score{
