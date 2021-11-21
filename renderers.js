@@ -6,6 +6,7 @@ const render = () => {
   renderPlayButton()
   renderScoreButtons()
   renderTeamNames()
+  renderRanks()
 }
 const renderGameClock = () => {
   let gameClock = document.getElementsByClassName("top-of-time") [0]
@@ -61,9 +62,19 @@ const renderTeamNames = () => {
   let teamNames = document.getElementsByClassName("team-name")
   Array.from(teamNames).forEach((team) => {
     const teamLabels = {
-    "home": state.homeTeam,
-    "visitor": state.visitorTeam
+    "home-team-name": state.homeTeam,
+    "visitor-team-name": state.visitorTeam
     }
     team.textContent = teamLabels[team.classList [1]]
+  });
+}
+const renderRanks = () => {
+  let ranks = document.getElementsByClassName("rank")
+  Array.from(ranks).forEach((rank) => {
+    const rankLabels = {
+    "home-rank": state.homeRank,
+    "visitor-rank": state.visitorRank
+    }
+    rank.textContent = rankLabels[rank.classList [1]]
   });
 }
