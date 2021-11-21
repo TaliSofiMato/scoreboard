@@ -1,12 +1,14 @@
 const swish = (team,num) => {
-  if (team === 'home') {
-  state.homeScore = state.homeScore + num
-  } else if (team === 'visitor') {
-    state.visitorScore = state.visitorScore + num
-  }
-  render() 
-  resetShotClock()
-  renderScoreButtons()
+  if (state.gameStatus === "Playing") {  
+    if (team === 'home') {
+      state.homeScore = state.homeScore + num
+    } else if (team === 'visitor') {
+      state.visitorScore = state.visitorScore + num
+    }
+    render() 
+    resetShotClock()
+    renderScoreButtons()
+  } 
 }
 const play = () => {
     if (state.gameStatus === "Unstarted") {
