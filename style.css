@@ -49,31 +49,33 @@ box-sizing: border-box;
     height: 70%;
 }
 .top-of-score div{
-    display: inline-block;
+    /* display: inline-block; */
     height: 100%;
     vertical-align: top;
     box-sizing: border-box;
+    float: left;
+    position: relative;
 }
 
 .home-logo {
     width: 20%;
     font-size: 35px;
-    position: relative;
+    float: left;
     left: 11px;
     top: 2px;
 
 }
-.home-rank {
+.rank, .home-rank {
     width: 10%;
     font-size: 16px;
     text-align: center;
-    position: relative;
+    float: left;
     top: 20px;
 }
-.home { 
+.home-team-name { 
     width: 25%;
     font-size: 29px;
-    position: relative;
+    float: left;
     top: 9px;
     right: 7px;
 }
@@ -82,7 +84,7 @@ box-sizing: border-box;
     font-size: 50px;
     font-weight: bold;
     text-align: right;
-    position: relative;
+    float: right;
     left: 142px;
     bottom: 53px;
     right: 5px;
@@ -93,28 +95,25 @@ box-sizing: border-box;
     font-size: 50px;
     font-weight: bold;
     text-align: left;
-    position: relative;
+    right: 142px;
     bottom: 5px;
     left: 5px;
 }
-.visitor {
+.visitor-team-name {
     width: 25%;
     font-size: 29px;
-    position: relative;
     top: 9px;
     left: 7px;
 }
-.visitor-rank{
+.rank, .visitor-rank {
     width: 10%;
     font-size: 16px;
     text-align: center;
-    position: relative;
     top: 20px;
 }
 .visitor-logo{
     width: 20%;
     font-size: 35px;
-    position: relative;
     left: 32px;
     top: 0px;
 }
