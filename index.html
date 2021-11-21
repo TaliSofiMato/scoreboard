@@ -8,10 +8,10 @@
 
   <body> 
     <button class="play" onclick="play()">Play</button>
-    <button onclick="swish('home', 3)">PHX 3 points</button>
-    <button onclick="swish('home', 2)">PHX 2 points</button>
-    <button onclick="swish('visitor', 2)">LAC 2 points</button>
-    <button onclick="swish('visitor', 3)">LAC 3 points</button>
+    <button class="score-button home3" onclick="swish('home', 3)"></button>
+    <button class="score-button home2" onclick="swish('home', 2)"></button>
+    <button class="score-button visitor2" onclick="swish('visitor', 2)"></button>
+    <button class="score-button visitor3" onclick="swish('visitor', 3)"></button>
 
     <div class="bar"> 
 
@@ -21,19 +21,20 @@
           <div class="top-of-score">
             <div class="home-logo">(/)</div>
             <div class="home-rank"></div>
-            <div class="home-text">PHX</div>
+            <div class="team-name home"></div>
             <div class="home-score"></div>
           </div>
-          <div class="bottom-of-score timeout-home">TIMEOUTS:</div>
+          <div class="bottom-of-score timeout-home"></div>
         </div>
         <div class="score visitor-section">
           <div class="top-of-score">
             <div class="visitor-score"></div>
-            <div class="visitor-text">LAC</div>
+            <div class="team-name visitor"></div>
             <div class="visior-rank"></div>
             <div class="visitor-logo">(/)</div>
           </div>
-          <div class="bottom-of-score timeout-visitor" >TIMEOUTS:</div>
+          <div class="bottom-of-score timeout-visitor"></div>
+
         </div>
       </div>
 

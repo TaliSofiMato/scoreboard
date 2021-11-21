@@ -11,6 +11,8 @@ let state = {
   timeoutHome: 7,
   timeoutVisitor: 7,
   homeRank: 2, 
-  visitorRank: 4
+  visitorRank: 4,
+  homeTeam: "PHX",
+  visitorTeam: "LAC"
 }
 window.onload = render

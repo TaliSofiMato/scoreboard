@@ -6,6 +6,7 @@ const swish = (team,num) => {
   }
   render() 
   resetShotClock()
+  renderScoreButtons()
 }
 const play = () => {
     if (state.gameStatus === "Unstarted") {
@@ -73,7 +74,7 @@ const play = () => {
   
   const prepClock = () => {
     const quarters = {
-      "1st":"2nd",
+      "1st":"2nd", 
       "2nd":"3rd",
       "3rd":"4th",
     }
@@ -83,6 +84,3 @@ const play = () => {
     state.shotClock = 40
     render()
   }
-
-  
-  
