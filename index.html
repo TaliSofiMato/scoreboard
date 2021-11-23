@@ -1,5 +1,6 @@
 <html> 
   <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" >
     <script src="eventListeners.js"></script>
     <script src="renderers.js"></script>
@@ -7,14 +8,14 @@
   </head>
 
   <body> 
-    <button class="play" onclick="play()"></button>
-    <button class="score-button home3" onclick="swish('home', 3)"></button>
-    <button class="score-button home2" onclick="swish('home', 2)"></button>
-    <button class="score-button visitor2" onclick="swish('visitor', 2)"></button>
-    <button class="score-button visitor3" onclick="swish('visitor', 3)"></button>
-
-    <div class="bar"> 
-
+    <button class="play btn btn-default" onclick="play()"></button>
+    <button class="score-button home3 btn btn-default" onclick="swish('home', 3)"></button>
+    <button class="score-button home2 btn btn-default" onclick="swish('home', 2)"></button>
+    <button class="score-button visitor2 btn btn-default" onclick="swish('visitor', 2)"></button>
+    <button class="score-button visitor3 btn btn-default" onclick="swish('visitor', 3)"></button>
+                                         
+    <div class="bar">                    
+                                         
       <div class="main-item scores">
 
         <div class="score home-section">
