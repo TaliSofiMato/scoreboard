@@ -1,80 +1,80 @@
-const render = () => {
-  renderGameClock();
-  renderScores();
-  renderTimeOuts();
-  renderShotClock();
-  renderPlayButton();
-  renderScoreButtons();
-  renderTeamNames();
-  renderRanks();
+window.window.render = () => {
+  window.renderGameClock();
+  window.renderScores();
+  window.renderTimeOuts();
+  window.renderShotClock();
+  window.renderPlayButton();
+  window.renderScoreButtons();
+  window.renderTeamNames();
+  window.renderRanks();
 };
-const renderGameClock = () => {
+window.renderGameClock = () => {
   const gameClock = document.getElementsByClassName('top-of-time')[0];
   const gameQuarter = document.getElementsByClassName('game-quarter')[0];
-  gameClock.textContent = state.gameClock;
-  gameQuarter.textContent = state.gameQuarter;
+  gameClock.textContent = window.state.gameClock;
+  gameQuarter.textContent = window.state.gameQuarter;
 };
-const renderScores = () => {
+window.renderScores = () => {
   const homeScore = document.getElementsByClassName('home-score')[0];
   const visitorScore = document.getElementsByClassName('visitor-score')[0];
-  homeScore.textContent = state.homeScore;
-  visitorScore.textContent = state.visitorScore;
+  homeScore.textContent = window.state.homeScore;
+  visitorScore.textContent = window.state.visitorScore;
 };
-const renderTimeOuts = () => {
+window.renderTimeOuts = () => {
   const timeoutHome = document.getElementsByClassName('timeout-home')[0];
   const timeoutVisitor = document.getElementsByClassName('timeout-visitor')[0];
-  timeoutHome.textContent = `Timeout:${state.timeoutHome}`;
-  timeoutVisitor.textContent = `Timeout:${state.timeoutVisitor}`;
+  timeoutHome.textContent = `Timeout:${window.state.timeoutHome}`;
+  timeoutVisitor.textContent = `Timeout:${window.state.timeoutVisitor}`;
 };
-const renderShotClock = () => {
+window.renderShotClock = () => {
   const shotClock = document.getElementsByClassName('shot-clock')[0];
-  shotClock.textContent = state.shotClock;
+  shotClock.textContent = window.state.shotClock;
   shotClock.style.color = 'yellow';
-  if (state.shotClock <= 5) {
+  if (window.state.shotClock <= 5) {
     shotClock.style.color = 'red';
   }
 };
 
-const renderPlayButton = () => {
+window.renderPlayButton = () => {
   const playButton = document.getElementsByClassName('play')[0];
   const labels = {
     Unstarted: 'Play',
     Playing: 'Pause',
     Paused: 'Resume',
   };
-  playButton.textContent = labels[state.gameStatus];
+  playButton.textContent = labels[window.state.gameStatus];
 };
 
-const renderScoreButtons = () => {
+window.renderScoreButtons = () => {
   const scoreButtons = document.getElementsByClassName('score-button');
   Array.from(scoreButtons).forEach((button) => {
     const buttonLabels = {
-      home3: `${state.homeTeam} 3 points`,
-      home2: `${state.homeTeam} 2 points`,
-      visitor2: `${state.visitorTeam} 2 points`,
-      visitor3: `${state.visitorTeam} 3 points`,
+      home3: `${window.state.homeTeam} 3 points`,
+      home2: `${window.state.homeTeam} 2 points`,
+      visitor2: `${window.state.visitorTeam} 2 points`,
+      visitor3: `${window.state.visitorTeam} 3 points`,
     };
-    button.textContent = buttonLabels[button.classList[1]];
+    button.textContent = buttonLabels[button.classList[1]]; // eslint-disable-line no-param-reassign
   });
 };
 
-const renderTeamNames = () => {
+window.renderTeamNames = () => {
   const teamNames = document.getElementsByClassName('team-name');
   Array.from(teamNames).forEach((team) => {
     const teamLabels = {
-      'home-team-name': state.homeTeam,
-      'visitor-team-name': state.visitorTeam,
+      'home-team-name': window.state.homeTeam,
+      'visitor-team-name': window.state.visitorTeam,
     };
-    team.textContent = teamLabels[team.classList[1]];
+    team.textContent = teamLabels[team.classList[1]]; // eslint-disable-line no-param-reassign
   });
 };
-const renderRanks = () => {
+window.renderRanks = () => {
   const ranks = document.getElementsByClassName('rank');
   Array.from(ranks).forEach((rank) => {
     const rankLabels = {
-      'home-rank': state.homeRank,
-      'visitor-rank': state.visitorRank,
+      'home-rank': window.state.homeRank,
+      'visitor-rank': window.state.visitorRank,
     };
-    rank.textContent = rankLabels[rank.classList[1]];
+    rank.textContent = rankLabels[rank.classList[1]]; // eslint-disable-line no-param-reassign
   });
 };

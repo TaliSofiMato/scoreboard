@@ -1,4 +1,4 @@
-const state = {
+window.state = {
   gameStatus: 'Unstarted',
   gameClock: '12:00',
   gameClockTimer: null,
@@ -14,4 +14,4 @@ const state = {
   homeTeam: 'PHX',
   visitorTeam: 'LAC',
 };
-window.onload = render;
+window.onload = window.render;

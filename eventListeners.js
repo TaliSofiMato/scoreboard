@@ -1,62 +1,61 @@
-const swish = (team, num) => {
-  if (state.gameStatus === 'Playing') {
+window.swish = (team, num) => {
+  if (window.state.gameStatus === 'Playing') {
     if (team === 'home') {
-      state.homeScore += num;
+      window.state.homeScore += num;
     } else if (team === 'visitor') {
-      state.visitorScore += num;
+      window.state.visitorScore += num;
     }
-    render();
+    window.render();
     resetShotClock();
-    renderScoreButtons();
   }
 };
-const play = () => {
-  if (state.gameStatus === 'Unstarted') {
-    state.gameStatus = 'Playing';
-    render();
+window.play = () => {
+  if (window.state.gameStatus === 'Unstarted') {
+    window.state.gameStatus = 'Playing';
+    window.render();
     startTimer();
     startShotClock();
-  } else if (state.gameStatus === 'Playing') {
-    state.gameStatus = 'Paused';
-    render();
-    clearInterval(state.gameClockTimer);
+  } else if (window.state.gameStatus === 'Playing') {
+    window.state.gameStatus = 'Paused';
+    window.render();
+    clearInterval(window.state.gameClockTimer);
     pauseShotClock();
-  } else if (state.gameStatus === 'Paused') {
-    state.gameStatus = 'Playing';
-    render();
+  } else if (window.state.gameStatus === 'Paused') {
+    window.state.gameStatus = 'Playing';
+    window.render();
     startTimer();
     startShotClock();
   }
 };
 const startShotClock = () => {
-  state.shotClockTimer = setInterval(() => {
-    if (state.shotClock === 0) {
-      state.shotClock = 40;
-      render();
+  window.state.shotClockTimer = setInterval(() => {
+    if (window.state.shotClock === 0) {
+      window.state.shotClock = 40;
+      window.render();
     } else {
-      state.shotClock -= 1;
-      render();
+      window.state.shotClock -= 1;
+      window.render();
     }
   }, 1000);
 };
 const resetShotClock = () => {
-  state.shotClock = 40;
-  render();
+  window.state.shotClock = 40;
+  window.render();
 };
 const pauseShotClock = () => {
-  clearInterval(state.shotClockTimer);
+  clearInterval(window.state.shotClockTimer);
 };
 const startTimer = () => {
-  state.gameClockTimer = setInterval(() => {
-    let [minutes, seconds] = state.gameClock.split(':');
-    if (state.gameClock === '0:00') {
-      state.gameClock = 'end';
-      render();
-      clearInterval(state.gameClockTimer);
-      clearInterval(state.shotClockTimer);
+  window.state.gameClockTimer = setInterval(() => {
+    let [minutes, seconds] = window.state.gameClock.split(':');
+    if (window.state.gameClock === '0:00') {
+      window.state.gameClock = 'end';
+      window.render();
+      clearInterval(window.state.gameClockTimer);
+      clearInterval(window.state.shotClockTimer);
       setTimeout(() => {
         prepClock();
-        renderPlayButton();
+        window.render();
       }, 3000);
     } else {
       if (seconds === '00') {
@@ -68,8 +67,8 @@ const startTimer = () => {
           seconds = `0${seconds}`;
         }
       }
-      state.gameClock = [minutes, seconds].join(':');
-      render();
+      window.state.gameClock = [minutes, seconds].join(':');
+      window.render();
     }
   }, 1000);
 };
@@ -80,9 +79,9 @@ const prepClock = () => {
     '2nd': '3rd',
     '3rd': '4th',
   };
-  state.gameQuarter = quarters[state.gameQuarter];
-  state.gameClock = '12:00';
-  state.gameStatus = 'Unstarted';
-  state.shotClock = 40;
-  render();
+  window.state.gameQuarter = quarters[window.state.gameQuarter];
+  window.state.gameClock = '12:00';
+  window.state.gameStatus = 'Unstarted';
+  window.state.shotClock = 40;
+  window.render();
 };
