@@ -1,4 +1,4 @@
-window.state = {
+export default {
   gameStatus: 'Unstarted',
   gameClock: '12:00',
   gameClockTimer: null,
@@ -14,4 +14,3 @@ window.state = {
   homeTeam: 'PHX',
   visitorTeam: 'LAC',
 };
-window.onload = window.render;
