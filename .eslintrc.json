@@ -6,8 +6,10 @@
     "extends": [
         "airbnb-base"
     ],
+    "ignorePatterns": ["dist"],
     "parserOptions": {
-        "ecmaVersion": 13
+        "ecmaVersion": 13,
+        "sourceType": "module"
     },
     "rules": {
         "no-use-before-define": 0
